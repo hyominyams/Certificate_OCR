@@ -6,13 +6,13 @@
 
 ```mermaid
 graph TD
-    A[사용자 (교사)] -->|이수증 이미지 업로드| B(Google Forms)
-    B -->|응답 저장| C{Google Sheets (Form Responses)}
-    C -->|Trigger (onFormSubmit)| D[Google Apps Script]
-    D -->|1. 이미지 전송| E[Upstage OCR API]
-    E -->|2. 텍스트 추출| D
-    D -->|3. 파싱 (Regex / LLM)| D
-    D -->|4. 카테고리 매칭 (Config)| F[카테고리별 시트]
+    A["사용자 (교사)"] -->|"이수증 이미지 업로드"| B("Google Forms")
+    B -->|"응답 저장"| C{"Google Sheets (Form Responses)"}
+    C -->|"Trigger (onFormSubmit)"| D["Google Apps Script"]
+    D -->|"1. 이미지 전송"| E["Upstage OCR API"]
+    E -->|"2. 텍스트 추출"| D
+    D -->|"3. 파싱 (Regex / LLM)"| D
+    D -->|"4. 카테고리 매칭 (Config)"| F["카테고리별 시트"]
 ```
 
 1.  **제출**: 사용자가 구글 폼을 통해 이수증 사진을 첨부하여 제출합니다.
